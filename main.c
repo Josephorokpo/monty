@@ -75,6 +75,18 @@ int main(int argc, char *argv[])
 		{
 			swap(&stack, line_number);  /* Implement swap function */
 		}
+		else if (strcmp(opcode, "pchar") == 0)
+		{
+			pchar(&stack, line_number);  /* Call the pchar function */
+		}
+		else if (strcmp(opcode, "pstr") == 0)
+		{
+			pstr(&stack, line_number);  /* Call the pstr function */
+		}
+		else if (strcmp(opcode, "rotl") == 0)
+		{
+			rotl(&stack, line_number);  /* Call the rotl function */
+		}
 		else if (strcmp(opcode, "add") == 0)
 		{
 			add(&stack, line_number);  /* Implement add function */
