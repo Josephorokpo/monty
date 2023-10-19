@@ -83,10 +83,6 @@ int main(int argc, char *argv[])
 		{
 			pstr(&stack, line_number);  /* Call the pstr function */
 		}
-		else if (strcmp(opcode, "rotl") == 0)
-		{
-			rotl(&stack, line_number);  /* Call the rotl function */
-		}
 		else if (strcmp(opcode, "add") == 0)
 		{
 			add(&stack, line_number);  /* Implement add function */
