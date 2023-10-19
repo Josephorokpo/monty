@@ -86,7 +86,7 @@ int main(int argc, char *argv[])
 		}
 		else if (strcmp(opcode, "div") == 0)
 		{
-			div(&stack, line_number);  /* Call the div function */
+			divide(&stack, line_number);  /* Call the div function */
 			continue;
 		}
 		else if (strcmp(opcode, "mul") == 0)
