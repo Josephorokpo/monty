@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include "monty.h"
 
 /**
  * pstr - Prints a string from the stack.
@@ -11,8 +11,7 @@ void pstr(stack_t **stack, unsigned int line_number)
 	char buffer[1024];  /* Adjust the buffer size as needed */
 	int buffer_index = 0;
 
-	while (current != NULL && current->n != 0 &&
-		       (current->n >= 0 && current->n <= 127))
+	while (current != NULL && current->n != 0 && (current->n >= 0 && current->n <= 127))
 	{
 		buffer[buffer_index++] = (char)current->n;
 		current = current->next;
@@ -26,8 +25,7 @@ void pstr(stack_t **stack, unsigned int line_number)
 	}
 	else
 	{
-		fprintf(stderr, "L%u: can't pstr, stack is empty or contains
-			       non-printable characters\n", line_number);
+		fprintf(stderr, "L%u: can't pstr, stack is empty or contains non-printable characters\n", line_number);
 		exit(EXIT_FAILURE);
 	}
 
